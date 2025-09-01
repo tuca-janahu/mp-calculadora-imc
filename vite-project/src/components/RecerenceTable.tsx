@@ -1,13 +1,13 @@
 function ReferenceTable () {
     return (
-        <table className="mx-auto shadow-sm">
+        <table className="mx-auto md:shadow-sm text-sm md:text-base  ">
           <thead className="text-rose-400 bg-zinc-100 text-left">
             <tr className="">
-              <th className="px-8 py-1">IMC</th>
-              <th className="px-8 py-1">Classificação</th>
+              <th className="md:px-8 px-4 py-1">IMC</th>
+              <th className="md:px-8 px-4 py-1">Classificação</th>
             </tr>
           </thead>
-          <tbody className="[&>tr:nth-child(even)]:bg-zinc-100 [&>tr:nth-child(odd)]:bg-white [&>tr>td]:px-8 [&>tr>td]:py-1">
+          <tbody className="[&>tr:nth-child(even)]:bg-zinc-100 [&>tr:nth-child(odd)]:bg-white md:[&>tr>td]:px-8 [&>tr>td]:px-4 [&>tr>td]:py-1">
             <tr>
               <td>Menor que 17</td>
               <td>Muito abaixo do peso</td>

@@ -66,7 +66,7 @@ function App() {
       resultado,
     });
 
-        e.currentTarget.reset();
+    e.currentTarget.reset();
   }
 
   function limpar(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
@@ -75,13 +75,19 @@ function App() {
   }
 
   return (
-    <main className="bg-white max-w-4xl mx-auto py-24 px-48 rounded-xl shadow-lg">
+    <main className="bg-white max-w-4xl mx-auto md:py-24 md:px-48 py-12 px-10 rounded-xl shadow-lg">
       <section id="form-section">
-        <h1 className="text-2xl font-bold mb-4">Calculadora de IMC</h1>
+        <h1 className="text-2xl font-bold mb-4 md:text-3xl">Calculadora de IMC</h1>
         <form onSubmit={handleSubmit}>
           <div className="">
             <Label htmlFor="peso">Peso (kg):</Label>
-            <Input disabled={!!IMCdata} className="" type="text" name="peso" id="peso" />
+            <Input
+              disabled={!!IMCdata}
+              className=""
+              type="text"
+              name="peso"
+              id="peso"
+            />
           </div>
           <div className="mt-4">
             <Label htmlFor="altura">Altura (cm):</Label>
@@ -97,7 +103,6 @@ function App() {
       <section id="resultado-section" className="py-10 px-4 h-40">
         {IMCdata ? (
           <ResultTable IMCdata={IMCdata} />
-
         ) : (
           <p className="text-center text-neutral-400 text-md">
             Saiba agora se está no seu peso ideal!
